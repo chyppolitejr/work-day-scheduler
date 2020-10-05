@@ -2,6 +2,10 @@
 
 <img src="work-day-scheduler-screenshot.png">
 
+(https://chyppolitejr.github.io/work-day-scheduler/
+Work Day Scheduler)
+
+
 MIT License
 
 Copyright (c) 2020 chyppolitejr
