@@ -9,6 +9,7 @@ var col1El = $("#col-1");
 var col2El = $("#col-2");
 var col3El = $("#col-3");
 var currentDayEl = $("<span>");
+var currentId;
 
 currentDayEl.addClass("comment");
 currentDayEl.text(moment().format('LLLL'));
@@ -36,6 +37,7 @@ currentDayEl.text(moment().format('LLLL'));
             saveButton.text("Save");
          
             newRow.addClass("row");
+            newRow.attr("id",i);
             newCol1.attr("data-index",i);
             newCol.addClass("col-2 hour");
             newCol.text(strHr);
@@ -48,6 +50,7 @@ currentDayEl.text(moment().format('LLLL'));
 
 
             newCol2.addClass("col-2 p-0 row");
+            newCol2.attr("id",i);
             newCol2.append(saveButton);
 
             
@@ -83,9 +86,26 @@ function updateTime() {
 // save button event listener
 $("button").on("click", function(event) {
     event.preventDefault();
-    console.log("you clicked a button");
 
+   // var target = event.target
+    var whichRowAmI = $('textarea').prev();
+
+    console.log(whichRowAmI);
+    console.log("you clicked a button");
+    currentId = event.target.parentElement.id
+    console.log(currentId);
+
+    var hrTask = $("[data-index=" + currentId + "]").val();
+     
+
+    console.log(hrTask);
 
 })
 
 });
+
+
+// save textarea data to localstorage
+function saveSchedule () {
+
+}
