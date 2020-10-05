@@ -7,7 +7,7 @@ https://chyppolitejr.github.io/work-day-scheduler/
 
 
 
-MIT License
+#MIT License
 
 Copyright (c) 2020 chyppolitejr
 
