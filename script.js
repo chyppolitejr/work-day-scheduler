@@ -30,6 +30,7 @@ currentDayEl.text(moment().format('LLLL'));
             var inputEl = $("<div>")
             var saveButton = $("<button>");
             var pEl = $("<p>");
+            var savedTask = localStorage.getItem(i);
 
             
             saveButton.addClass("btn saveBtn i")
@@ -39,6 +40,7 @@ currentDayEl.text(moment().format('LLLL'));
             newRow.addClass("row");
             newRow.attr("id",i);
             newCol1.attr("data-index",i);
+            newCol1.text(savedTask)
             newCol.addClass("col-2 hour");
             newCol.text(strHr);
             newRow.append(newCol);
@@ -58,6 +60,8 @@ currentDayEl.text(moment().format('LLLL'));
             newRow.append(newCol1);
             newRow.append(newCol2);
 
+            
+            // console.log(savedTasks);
             // console.log("current hour is " + currentHr);
             // console.log("current i is :" + i);
 
@@ -99,14 +103,12 @@ $("button").on("click", function(event) {
      
     localStorage.setItem(currentId,hrTask);
 
-    console.log(hrTask);
-
 })
+
+// retrieve entries from local storage
+
+
 
 });
 
 
-// save textarea data to localstorage
-function saveSchedule () {
-
-}
