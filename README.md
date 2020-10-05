@@ -2,8 +2,9 @@
 
 <img src="work-day-scheduler-screenshot.png">
 
-(https://chyppolitejr.github.io/work-day-scheduler/
-Work Day Scheduler)
+# application url
+https://chyppolitejr.github.io/work-day-scheduler/
+
 
 
 MIT License
