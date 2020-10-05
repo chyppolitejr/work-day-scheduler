@@ -37,13 +37,13 @@ var col3El = $("#col-3");
             newCol.text(strHr);
             newRow.append(newCol);
 
-            newCol1.addClass("col-7");
+            newCol1.addClass("col-7 row");
             
             // pEl.addClass("pt-4");
             pEl.text("Save");
 
 
-            newCol2.addClass("col-2 p-0");
+            newCol2.addClass("col-2 p-0 row");
             newCol2.append(saveButton);
 
             
