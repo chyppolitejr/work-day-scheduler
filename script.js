@@ -97,6 +97,7 @@ $("button").on("click", function(event) {
 
     var hrTask = $("[data-index=" + currentId + "]").val();
      
+    localStorage.setItem(currentId,hrTask);
 
     console.log(hrTask);
 
