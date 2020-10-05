@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
 var currDt = moment().format('LLLL');
-var currentHr = parseInt(moment().format('h'));
+var currentHr = parseInt(moment().format('HH'));
 var timeBlockEl = $(".time-block");
 var workStartHr = 9;
 var workEndHr = 17;
@@ -19,11 +19,8 @@ currentDayEl.text(moment().format('LLLL'));
  $("#currentDay").append(currentDayEl);
 
         for (i=workStartHr; i <= workEndHr;i++) {
-            // var timeP = $("<p>");
-            var strHr = i + ":00";
-            // var descP = $("<p>");
+            //var strHr = i + ":00";
             var newRow = $("<div>");
-            // var newDiv = $("<div>");
             var newCol = $("<div>")
             var newCol1 = $("<textarea>");
             var newCol2 = $("<div>");
@@ -31,7 +28,11 @@ currentDayEl.text(moment().format('LLLL'));
             var saveButton = $("<button>");
             var pEl = $("<p>");
             var savedTask = localStorage.getItem(i);
+            var displayTm = moment(i,'HH').format("LT")
+;
+            console.log(displayTm.toString());
 
+          
             
             saveButton.addClass("btn saveBtn i")
             saveButton.attr("type","button");
@@ -42,7 +43,7 @@ currentDayEl.text(moment().format('LLLL'));
             newCol1.attr("data-index",i);
             newCol1.text(savedTask)
             newCol.addClass("col-2 hour");
-            newCol.text(strHr);
+            newCol.text(displayTm);
             newRow.append(newCol);
 
             newCol1.addClass("col-7 row");
