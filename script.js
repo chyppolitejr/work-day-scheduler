@@ -27,7 +27,7 @@ var col3El = $("#col-3");
             var pEl = $("<p>");
 
             
-            saveButton.addClass("saveBtn i")
+            saveButton.addClass("btn saveBtn i")
             saveButton.attr("type","button");
             saveButton.text("Save");
          
