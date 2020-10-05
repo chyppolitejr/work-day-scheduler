@@ -1,17 +1,21 @@
 $(document).ready(function() {
 
 var currDt = moment().format('LLLL');
-var currentHr = 11//parseInt(moment().format('h'));
+var currentHr = parseInt(moment().format('h'));
 var timeBlockEl = $(".time-block");
 var workStartHr = 9;
 var workEndHr = 17;
 var col1El = $("#col-1");
 var col2El = $("#col-2");
 var col3El = $("#col-3");
+var currentDayEl = $("<span>");
+
+currentDayEl.addClass("comment");
+currentDayEl.text(moment().format('LLLL'));
 
  console.log(currentHr);
 
- $("#currentDay").text(currDt);
+ $("#currentDay").append(currentDayEl);
 
         for (i=workStartHr; i <= workEndHr;i++) {
             // var timeP = $("<p>");
@@ -73,4 +77,15 @@ var col3El = $("#col-3");
 
 
         }
+function updateTime() {
+
+}    
+// save button event listener
+$("button").on("click", function(event) {
+    event.preventDefault();
+    console.log("you clicked a button");
+
+
+})
+
 });
